@@ -59,6 +59,7 @@ header h1 {
 header p {
   font-size: 1.2rem;
   color: #999;
+  cursor: pointer;
 }
 
 /* About Section */
@@ -99,7 +100,7 @@ ul {
 }
 
 .projects > ul > li {
-  margin: 10px 0px;
+  margin: 15px 0px;
 }
 
 /* Links */
@@ -123,6 +124,48 @@ footer {
 footer p {
   font-size: 0.9rem;
   color: #888;
+}
+
+.projects2 > ul > li {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects2 > ul > li > .details {
+  margin: 15px 0px 15px 40px;
+}
+
+.projects2 > ul > li > .details > .tech > ul {
+  display: flex;
+}
+
+.projects2 > ul > li > .details > .tech > ul > li {
+  padding: 5px 5px;
+  border: 1px solid gray;
+  border-radius: 9px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0px 5px;
+  margin-bottom: 20px;
+}
+
+.porjectButtom {
+  display: flex;
+}
+
+.porjectButtom > a {
+  text-decoration: none;
+  margin: 0px 10px;
+  padding: 5px;
+  border: 1px solid gray;
+  width: 80px;
+  border-radius: 9px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 900px) {
