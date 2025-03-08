@@ -38,9 +38,10 @@ body {
 nav {
   background-color: #1e1e1e;
   padding: 20px 0px;
-  /* position: sticky; */
-  /* top: 0; */
-  /* border-bottom: 1px solid #595959; */
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid rgba(89, 89, 89, 0.3);
+  z-index: 999;
 }
 
 /* Social Media Links */
@@ -66,9 +67,9 @@ header {
   margin-bottom: 40px;
 }
 
-header h1 {
+header > h1 {
   font-size: 2.5rem;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   color: var(--accent-color);
 }
 
@@ -111,6 +112,10 @@ li {
   padding-left: 0;
 }
 
+.viewMyResume {
+  color: var(--accent-color);
+}
+
 /* Projects Section */
 ul {
   list-style: none;
@@ -141,6 +146,12 @@ footer {
 footer p {
   font-size: 0.9rem;
   color: #888;
+}
+
+footer > i > p > a {
+  font-size: 0.9rem;
+  color: #888;
+  margin-left: 3px;
 }
 
 .projects2 > ul > li {

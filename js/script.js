@@ -4,8 +4,8 @@ const projectData = [
     name: "Sync Talk",
     description:
       "Real-Time Chat App Using Golang with WebSocket (Frontend - React, Shadcn Ui)",
-    liveLink: "",
-    githubLink: "#",
+    liveLink: "https://sync-talk.gauravst.in",
+    githubLink: "https://github.com/Gauravst/sync-talk",
     imageLink: "./media/sync-talk.webp",
   },
   {

@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+:root {
+  --primary-color: #0070f3;
+  --secondary-color: #0366d6;
+  --background-color: #0f172a;
+  --surface-color: #1e293b;
+  --text-color: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-color: #38bdf8;
+  --border-color: #334155;
+  --card-bg: #1e293b;
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: Arial, sans-serif; */
+  font-family: "Source Sans 3", sans-serif;
+  /* font-family: "Lato", sans-serif; */
+  /* background-color: #0d1117; */
+  background-color: #1e1e1e;
+  color: #fff;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0px 100px 20px 100px; /* Updated padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.donation-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.qr-image {
+  width: 200px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 9px;
+  margin-bottom: 20px;
+}
+
+.upi-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+}
+
+.upi-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  background: #f1f1f1;
+  padding: 0px 10px;
+  border-radius: 9px 0px 0px 9px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.copy-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 0px 9px 9px 0px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 50px;
+  width: 50px;
+}
+
+.copy-button:hover {
+  background: #0056b3;
+}
+
+.buy-coffee {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  background: #ffdd00;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.buy-coffee:hover {
+  background: #ffc107;
+}
