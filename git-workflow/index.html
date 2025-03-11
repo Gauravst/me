@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Workflow Guide</title>
+    <style>
+      body {
+        font-family: "Source Sans 3", sans-serif;
+        background-color: #1e1e1e;
+        color: white;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #38bdf8;
+      }
+      code {
+        background-color: #333;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Git Workflow Guide</h1>
+
+    <div class="section">
+      <h2>1. Branching Strategy</h2>
+      <h3>Main Branches:</h3>
+      <ul>
+        <li><strong>main</strong> → Stable production branch.</li>
+        <li>
+          <strong>dev</strong> → Development branch where all features and fixes
+          are merged.
+        </li>
+      </ul>
+      <h3>Creating a New Branch</h3>
+      <p>All new branches should be created from <code>dev</code>.</p>
+      <p><strong>Feature Branches:</strong></p>
+      <code
+        >git checkout dev &amp;&amp; git pull origin dev &amp;&amp; git checkout
+        -b feat/feature-name</code
+      >
+      <p><strong>Fix Branches:</strong></p>
+      <code
+        >git checkout dev &amp;&amp; git pull origin dev &amp;&amp; git checkout
+        -b fix/bug-description</code
+      >
+    </div>
+
+    <div class="section">
+      <h2>2. Commit Message Convention</h2>
+      <p>Use clear and structured commit messages:</p>
+      <code>type: short description</code>
+      <h3>Types of Commits:</h3>
+      <ul>
+        <li>
+          <strong>feat</strong> → New feature (Example:
+          <code>feat: add login</code>)
+        </li>
+        <li>
+          <strong>fix</strong> → Bug fix (Example:
+          <code>fix: resolve login issue</code>)
+        </li>
+        <li><strong>docs</strong> → Documentation update</li>
+        <li><strong>style</strong> → Code formatting</li>
+        <li><strong>refactor</strong> → Code restructuring</li>
+        <li><strong>test</strong> → Adding tests</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>3. Pushing Your Changes</h2>
+      <code
+        >git add . &amp;&amp; git commit -m "feat: add new auth flow" &amp;&amp;
+        git push origin your-branch-name</code
+      >
+    </div>
+
+    <div class="section">
+      <h2>4. Creating a Pull Request (PR)</h2>
+      <p>1. Go to GitHub/GitLab.</p>
+      <p>2. Create a PR from your branch <strong>into dev</strong>.</p>
+      <p>3. Add a clear title and description.</p>
+      <p>4. Wait for approval before merging.</p>
+    </div>
+
+    <div class="section">
+      <h2>5. Merging to dev</h2>
+      <p>
+        Once approved, the PR is merged into <code>dev</code>. After testing, it
+        will later be merged into <code>main</code>.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Summary</h2>
+      <ul>
+        <li>All branches are created from <code>dev</code>.</li>
+        <li>
+          Use proper naming (<code>feat/feature-name</code>,
+          <code>fix/bug-name</code>).
+        </li>
+        <li>Follow commit message rules.</li>
+        <li>Always create a PR and wait for approval.</li>
+      </ul>
+    </div>
+  </body>
+</html>
