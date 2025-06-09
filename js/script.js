@@ -1,5 +1,14 @@
 const projectData = [
   {
+    id: 3,
+    name: "D-Upload",
+    description:
+      "A cloud file storage application using Node.js & React, utilizing Discord as storage.",
+    liveLink: "https://github.com/Gauravst/dUpload",
+    githubLink: "https://github.com/Gauravst/dUpload",
+    imageLink: "./media/dupload.png",
+  },
+  {
     id: 0,
     name: "Sync Talk",
     description:
@@ -9,13 +18,13 @@ const projectData = [
     imageLink: "./media/sync-talk.webp",
   },
   {
-    id: 1,
-    name: "Go Shorty",
+    id: 0,
+    name: "EDS - Excalidraw Drawing Sync",
     description:
-      "A URL shortener built with GoLang in Backend and React in Frontend.",
-    liveLink: "https://go-shorty.gauravst.in",
-    githubLink: "https://github.com/Gauravst/go-shorty",
-    imageLink: "./media/go-shorty.webp",
+      "Chrome extension to manage Excalidraw drawings and back them up to GitHub.",
+    liveLink: "https://github.com/Gauravst/EDS",
+    githubLink: "https://github.com/Gauravst/EDS",
+    imageLink: "./media/eds.png",
   },
   {
     id: 2,
@@ -27,28 +36,19 @@ const projectData = [
     imageLink: "./media/go-api-temp.webp",
   },
   {
-    id: 3,
-    name: "D-Upload",
+    id: 1,
+    name: "Go Shorty",
     description:
-      "A cloud file storage application using Node.js & React, utilizing Discord as storage (currently in development).",
-    liveLink: "#",
-    githubLink: "#",
-    imageLink: "./media/coming.png",
+      "A URL shortener built with GoLang in Backend and React in Frontend.",
+    liveLink: "https://go-shorty.gauravst.in",
+    githubLink: "https://github.com/Gauravst/go-shorty",
+    imageLink: "./media/go-shorty.webp",
   },
   {
     id: 4,
     name: "Tweet Canvas",
     description:
       "Transform Tweets into Stunning Images (Currently in Development)",
-    liveLink: "#",
-    githubLink: "#",
-    imageLink: "./media/coming.png",
-  },
-  {
-    id: 5,
-    name: "Credentia",
-    description:
-      "A Job searching and posting platform built with Next.js and PostgreSQL (Currently in Development)",
     liveLink: "#",
     githubLink: "#",
     imageLink: "./media/coming.png",
