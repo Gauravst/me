@@ -1,88 +1,87 @@
-const projectData = [
+const projects = [
   {
-    id: 3,
-    name: "D-Upload",
-    description:
-      "A cloud file storage application using Node.js & React, utilizing Discord as storage.",
-    liveLink: "https://github.com/Gauravst/dUpload",
-    githubLink: "https://github.com/Gauravst/dUpload",
-    imageLink: "./media/dupload.png",
-  },
-  {
-    id: 0,
     name: "Sync Talk",
-    description:
-      "Real-Time Chat App Using Golang with WebSocket (Frontend - React, Shadcn Ui)",
-    liveLink: "https://sync-talk.gauravst.in",
-    githubLink: "https://github.com/Gauravst/sync-talk",
-    imageLink: "./media/sync-talk.webp",
+    description: "realtime chat over websockets.",
+    stack: "go / websocket / react",
+    live: "https://sync-talk.gauravst.in",
+    repo: "https://github.com/Gauravst/sync-talk"
   },
   {
-    id: 0,
-    name: "EDS - Excalidraw Drawing Sync",
-    description:
-      "Chrome extension to manage Excalidraw drawings and back them up to GitHub.",
-    liveLink: "https://github.com/Gauravst/EDS",
-    githubLink: "https://github.com/Gauravst/EDS",
-    imageLink: "./media/eds.png",
+    name: "D-Upload",
+    description: "file storage that uses discord as the backend.",
+    stack: "node.js / react / discord api",
+    live: null,
+    repo: "https://github.com/Gauravst/dUpload"
   },
   {
-    id: 2,
-    name: "Go Backend Template (API)",
-    description:
-      "A Production Ready Go Backend API Template designed to kickstart your next project.",
-    liveLink: "https://github.com/Gauravst/go-api-template",
-    githubLink: "https://github.com/Gauravst/go-api-template",
-    imageLink: "./media/go-api-temp.webp",
-  },
-  {
-    id: 1,
-    name: "Go Shorty",
-    description:
-      "A URL shortener built with GoLang in Backend and React in Frontend.",
-    liveLink: "https://go-shorty.gauravst.in",
-    githubLink: "https://github.com/Gauravst/go-shorty",
-    imageLink: "./media/go-shorty.webp",
-  },
-  {
-    id: 4,
-    name: "Tweet Canvas",
-    description:
-      "Transform Tweets into Stunning Images (Currently in Development)",
-    liveLink: "#",
-    githubLink: "#",
-    imageLink: "./media/coming.png",
-  },
+    name: "EDS",
+    description: "chrome extension that backs up excalidraw drawings to github.",
+    stack: "javascript / chrome api / github api",
+    live: null,
+    repo: "https://github.com/Gauravst/EDS"
+  }
 ];
 
-const hanldeImageClick = () => {
-  const previewCard = document.querySelector(".imagePreview");
-  previewCard.classList.remove(".imagePreview");
-  previewCard.classList.add(".imagePreviewShow");
-};
+function external(href) {
+  const a = document.createElement("a");
+  a.href = href;
+  a.target = "_blank";
+  a.rel = "noopener noreferrer";
+  return a;
+}
 
-const projectGrid = document.querySelector(".projects-grid");
+function render(project) {
+  const li = document.createElement("li");
+  li.className = "item";
 
-projectData.forEach((project) => {
-  const projectCard = document.createElement("div");
-  projectCard.classList.add("project-card");
+  const head = document.createElement("div");
+  head.className = "item-head";
 
-  projectCard.innerHTML = `
-    <div class="imagePreview">
-      <img src="${project.imageLink}" alt="${project.name}" />
-    </div>
-    <div class="project-image" onClick={hanldeImageClick}>
-      <img src="${project.imageLink}" alt="${project.name}" />
-    </div>
-    <div class="project-content">
-      <h3>${project.name}</h3>
-      <p>${project.description}</p>
-      <div class="project-links">
-        <a href="${project.liveLink}" class="project-link" target="_blank">Live</a>
-        <a href="${project.githubLink}" class="project-link" target="_blank">GitHub</a>
-      </div>
-    </div>
-  `;
+  const name = document.createElement("h3");
+  name.className = "item-name";
 
-  projectGrid.appendChild(projectCard);
-});
+  if (project.repo) {
+    const link = external(project.repo);
+    link.textContent = project.name;
+    name.appendChild(link);
+  } else {
+    name.textContent = project.name;
+  }
+  head.appendChild(name);
+
+  if (project.state) {
+    const state = document.createElement("span");
+    state.className = "item-state";
+    state.textContent = project.state;
+    head.appendChild(state);
+  }
+
+  if (project.live) {
+    const live = external(project.live);
+    live.className = "item-live";
+    live.textContent = "live";
+    live.setAttribute("aria-label", `${project.name}, open live site`);
+    head.appendChild(live);
+  }
+
+  const desc = document.createElement("p");
+  desc.className = "item-desc";
+  desc.textContent = project.description;
+
+  const stack = document.createElement("p");
+  stack.className = "item-stack";
+  stack.textContent = project.stack;
+
+  li.append(head, desc, stack);
+  return li;
+}
+
+const manifest = document.getElementById("manifest");
+if (manifest) {
+  const frag = document.createDocumentFragment();
+  projects.forEach((p) => frag.appendChild(render(p)));
+  manifest.appendChild(frag);
+}
+
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();

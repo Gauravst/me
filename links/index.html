@@ -1,14 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Links - Gaurav</title>
-    <link href="./style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <h1>Links</h1>
-    <div class="mainUl"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#14110f">
+    <title>links | gaurav</title>
+    <meta name="description" content="templates, tools and notes by gaurav singh tangariya.">
+    <link rel="canonical" href="https://me.gauravst.in/links/">
+
+    <link rel="icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">skip to content</a>
+
+    <div class="shell">
+
+        <header class="status">
+            <nav class="status-nav" aria-label="sections">
+                <a href="../#skills">skills</a>
+                <a href="../#projects">projects</a>
+                <a href="../#experience">experience</a>
+                <a href="../">home</a>
+            </nav>
+        </header>
+
+        <main id="main">
+
+            <section class="row row-intro" aria-labelledby="links-h">
+                <div class="body">
+                    <h1 id="links-h">links</h1>
+                    <p class="role">templates, tools and notes</p>
+                    <p class="lede">
+                        things i have built or written that are useful on their own. take
+                        what you need.
+                    </p>
+
+                    <ul class="links" id="links-container">
+                        <!-- rendered by js -->
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="foot">
+            <p>&copy; <span id="year">2026</span> gaurav singh tangariya</p>
+        </footer>
+
+    </div>
+
+    <script src="../js/links.js"></script>
     <script src="./script.js"></script>
-  </body>
+</body>
 </html>
